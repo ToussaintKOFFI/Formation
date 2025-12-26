@@ -1,3 +1,485 @@
-h1{
-    color: palevioletred;
+*{
+    margin: 0;
+    padding: 0;
 }
+.icon{
+    border-radius: 50%;
+    width: 100px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: white;
+    gap: 10px;
+    box-shadow: 4px 1px 6px;
+    top: 0;
+    z-index: 100;
+    /* position:fixed; */
+}
+header ul{
+    list-style: none;
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    font-family: Georgia, 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 20px;
+    color: blue;
+    margin: 0px 70px;
+
+}
+.annonce{
+    display: flex;
+    align-items: center;
+    margin: 0px 70px;
+    gap: 10px;
+}
+.btnAnonnce{
+    border: none;
+    background: rgb(19, 19, 222);
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+.item:nth-child(1){
+    border-bottom: solid 2px rgb(11, 11, 235) ;
+}
+.item a{
+    transition: all .5s;
+}
+.item a:hover{
+    transition: all .4S;
+    color: blue;
+}
+.btnAnonnce a{
+    font-family: sans-serif;
+    padding: 10px;
+    color: white;
+}
+.profil{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+/* TODO contenu principale */
+.section1{
+    /* margin-top: 60px; */
+    width: 100%;
+    height: 400px;
+    background-repeat:no-repeat ;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/m3.jpeg');
+    background-size: cover;
+    background-attachment: scroll;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+.section1 h2{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+.section1 P{
+    font-size: 16px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+.section1 input ,select ,button{
+    margin: 0;
+    height: 35PX;
+    padding: 4px 10px;
+    width: 180px;
+    border:none ;
+}
+.section1 form{
+    display: flex;
+    border-radius: 7px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    background: white;
+    align-items: center;
+}
+
+input:focus{
+    border:rgb(211, 211, 213) 2px solid;
+}
+input::placeholder{
+    color: blue;
+}
+.section1 select{
+    color: blue;
+    border-right: solid 2px rgb(204, 201, 201);
+    margin-right: 5px;
+}
+select option:nth-child(n){
+    color:black;
+    background-color: rgb(222, 222, 222);
+}
+
+.section1 button{
+    background: orangered;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 4px;
+    transition: .5s;
+}
+.section1 button:hover{
+    background: rgb(195, 71, 26);
+    transition: .5s;
+    cursor: pointer;
+}
+.section2{
+    display: flex;
+    margin: 40px 4px 40px 20px;
+    gap: 22px;
+
+}
+.left{
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow:  2px 1px 6px;
+}
+.left .filtres {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    gap: 8px;
+    border-bottom: 1px solid rgb(233, 227, 227);
+    padding-bottom: 10PX;
+
+}
+.left p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+.left .surface{
+    width: 55px;
+}
+.left .budget{
+    width: 55px;
+}
+.equipement{
+    border-bottom: solid 1px rgb(228, 220, 220);
+     padding: 15px 0px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+.equipement input{
+    padding: 123px;
+}
+#dpe{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.left button{
+    width: 100%;
+    border-radius: 7px;
+    background: orangered;
+}
+.equipement label{
+    margin-left: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.prix{
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+.prix p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    background: rgb(21, 21, 91);
+    color: white;
+    border-radius: 0px 7px 7px 0px;
+    transform: translateY(-35px);
+    padding: 5px;
+}
+.prix .bi-heart{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    margin-right: -75PX ;
+    color: white;
+    transform: translateY(-33px);
+}
+.rightP .section3{
+    width: 95%;
+    box-shadow:2px 1px 5px ;
+    padding: 15px;
+
+}
+.DIVmaison{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.maison{
+    border-radius: 7px;
+    box-shadow:2px 3px 4px ;
+    transition: all ease-in-out .6s;
+}
+.maison:hover{
+    transform: scale(1.01);
+    transition: all ease-in-out .6s;
+    box-shadow: 2px 3px 7px;
+}
+.maison img{
+    border-radius: 7px;
+
+}
+.right{
+    display: flex;
+    justify-content: center;
+}
+.localiser{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 100%;
+    transform: translateY(-20px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding: 15px 15px 15px 10px;
+}
+.localiser p:nth-child(1){
+    font-weight: bold;
+}
+.localiser p:nth-child(2){
+    font-size: small;
+}
+.localiser p .bi-heart{
+    float: right;
+    margin-right: 10px;
+}
+.rightP{
+    width: 100%;
+    padding: 10px;
+}
+.rightP h3{
+    padding-bottom: 15PX;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.titre{
+    border-bottom: 1px solid rgb(216, 205, 205);
+    margin-bottom: 10px;
+
+}
+.btn{
+    display: flex;
+    width: 100%;
+    border-radius: 55px;
+    height: auto;
+    margin-top: 20px;
+}
+.btn button{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+.btn button:nth-child(1){
+    /* border-right: 1px solid rgb(215, 206, 206); */
+    border-radius: 7px 0 0 7px;
+}
+.btn button:nth-child(3){
+    border-radius: 0px 07px 07px 0px;
+    /* border-left: 1px solid rgb(215, 206, 206); */
+
+    
+}
+.section4 .maison{
+    width: 100%
+}
+.section4 .maison .btn {
+    border-top: 1PX solid rgb(200, 196, 196);
+}
+.section4{
+    gap: 20px;
+    margin-top: 30px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 2px 4px 6px;
+    padding: 15px;
+}
+.section4 .contact{
+    width: 40%;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 2px 4px 6px;
+    height:  fit-content;
+
+}
+.section4 .prix{
+    display: flex;
+    justify-content:space-between;
+    width:78%;
+    z-index: 100;
+}
+.section4 .contact p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 7px;
+}
+.section4 .contact h3{
+    border-bottom: 1px solid rgb(207, 197, 197);
+    margin-bottom: 10px;
+
+}
+.section4 .contact form input, textarea{
+    height: 40px;
+    margin-top: 15PX;
+    border: solid 1px rgb(200, 192, 192);
+    border-radius: 7px;
+    padding: 7px 14px;
+}
+.section4 .contact form textarea{
+    height: 80px;
+    max-width: 92%;
+    min-width: 92%;
+    font-size: 17px;
+}
+.section4 .contact form textarea::placeholder ,input::placeholder{
+    color: blue;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.section4 .contact form button{
+    width: 100%;
+    border-radius: 7px;
+    background: orangered;
+    color: white;
+    font: arial  Verdana, Geneva, Tahoma, sans-serif 16px 500;
+    margin-top:20px;
+}
+button{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: all ease-in .6s;
+
+}
+button:hover{
+    transition: ease-in .6s;
+    opacity: .6;
+}
+footer{
+    height: fit-content;
+    background: rgb(12, 12, 67);
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 65px;
+    padding-bottom: 20px;
+    width: 91%;
+    color: white;
+    gap: 50px;
+}
+footer ul li a{
+    color: rgb(231, 222, 222);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .4s ;
+}
+footer ul li a:hover{
+    color: blue;
+    transition: .4s ;
+}
+footer p{
+    color: rgb(215, 209, 209);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    word-spacing: 1px;
+}
+footer .foot{
+    width: 10%;
+}
+footer .foot:nth-child(1){
+    text-align: justify;
+    width:30%;
+}
+footer .foot .logo{
+    margin-bottom: 15PX;
+    margin-left: 0cm;
+}
+footer .foot ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+footer .foot:nth-child(5){
+    background: white;
+    color: black;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    gap: 30px;
+    flex-direction: column;
+    height: 150px;
+    border-radius: 7px;
+}
+footer .foot:nth-child(5) form{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+}
+footer input{
+    height: 38px;
+    width:100%;
+    border-radius: 7px;
+    border: 1px solid rgb(211, 209, 209);
+    padding-left: 15px;
+}
+footer button{
+    width: 100%;
+    background: orangered;
+    border-radius: 7px;
+}
+footer nav{
+    gap: 15px;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+}
+footer nav a{
+    color: white;
+
+}
+footer.logo h3 a{
+    color: white;
+}
+.tkode{
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+

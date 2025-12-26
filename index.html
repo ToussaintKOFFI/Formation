@@ -1,12 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ImmobilierPro</title>
+    <link rel="shortcut icon" class="icon" href="Yassi.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-    <h1>Je t'aime mon informaticienne </h1>
+    <header>
+        <div class="logo">
+            <i class="bi bi-house-check-fill"></i>
+            <h3>
+                <a href="">Immobilier<span style="font-size: 24px; color: rgb(21, 45, 202)">Pro</span></a>
+            </h3>
+        </div>
+        <nav>
+            <ul id="list-items">
+                <li class="item"><a href="">Achéter</a></li>
+                <li class="item"><a href="">Louer</a></li>
+                <li class="item"><a href="">Vendre</a></li>
+                <li class="item"><a href="">Estimer</a></li>
+            </ul>
+        </nav>
+        <div class="annonce">
+            <i class="bi bi-heart" style="font-size: 20px"></i>
+            <button class="btnAnonnce"><a href="">Déposer une annonce</a></button>
+            <img src="Yassi.jpeg" alt="" class="profil" />
+        </div>
+    </header>
+
+    <section class="section1">
+        <h2>Trouvez le bien immobilier de vos rêves</h2>
+        <p>Achat,vente et location en toute confiance.</p>
+        <form action="" method="get">
+            <i class="bi bi-"></i>
+            <input type="search" name="" id="" placeholder="ville, Quatier" />
+            <select name="" id="">
+                <option style="color: blue; border-bottom: 4px solid black" value="" disabled>
+                    Type de bien
+                </option>
+                <option value="">Type de bien</option>
+                <option value="">Type de bien</option>
+                <option value="">Type de bien</option>
+            </select>
+            <input type="search" placeholder="Budget Max" list="Budget" />
+            <datalist id="Budget">
+                <option value="10 000 FCA"></option>
+                <option value="100 000 FCA"></option>
+                <option value="1000 000 FCA"></option>
+                <option value="1000 000 FCA"></option>
+            </datalist>
+
+            <button type="submit">Rechercher</button>
+        </form>
+    </section>
+    <section class="section2">
+        <div class="left">
+            <form action="">
+                <div class="filtres">
+                    <i class="bi bi-filter"></i>
+                    <h5>Filtres</h5>
+                </div>
+                <div style="border-bottom: solid 1px rgb(228, 220, 220); padding: 15px 0">
+                    <p>Budget</p>
+                    <div style="display: flex">
+                        <div id="budget" class="budget">500 $</div>
+                        <input type="range" value="10" min="50" max="3000" step="50"
+                            oninput="document.getElementById('budget').textContent=this.value+'  $'" />
+                        <div class="budget">3000 $</div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 1px rgb(228, 220, 220); padding: 15px 0">
+                    <p>Surface</p>
+                    <div style="display: flex">
+                        <div id="surface" class="surface">20 m²</div>
+                        <input type="range" value="10" min="20" max="3000" step="50"
+                            oninput="document.getElementById('surface').textContent=this.value+'  m²'" list="surface" />
+                        <div class="surface">1000 m²</div>
+                    </div>
+                </div>
+                <div class="equipement">
+                    <p>Equipement</p>
+                    <div>
+                        <input type="checkbox" name="" id="" /><label for="">Balcon</label><br />
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" /><label for="">Balcon</label><br />
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" /><label for="">Balcon</label><br />
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" /><label for="">Balcon</label><br />
+                    </div>
+                </div>
+                <div>
+                    <select name="" id="dpe">
+                        <option value="">DPE</option>
+                    </select>
+                </div>
+                <button type="submit" value="">Appliquer les filtres</button>
+            </form>
+        </div>
+        <div class="rightP">
+            <section class="section3">
+                <div class="titre">
+                    <h3>Appartement et maison à louer</h3>
+
+                </div>
+                <div class="right">
+                    <div class="DIVmaison">
+                        <div class="maison">
+                            <img src="m2.jpeg" alt="" srcset="" width="320px" height="240px">
+                            <div class="prix">
+                                <p>1 500 $/mois</p>
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <div class="localiser">
+                                <p>Bouaké-Air france 3</p>
+                                <P><i class="bi bi-house-fill"></i> Maison</P>
+                                <p>Superficie : <span style="font-family: fantasy;">50 m²</span><i
+                                        class="bi bi-heart"></i></p>
+                            </div>
+                        </div>
+                        <div class="maison">
+                            <img src="m4.jpeg" alt="" srcset="" width="320px" height="240px">
+                            <div class="prix">
+                                <p>1 500 $/mois</p>
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <div class="localiser">
+                                <p>Bouaké-Air france 3</p>
+                                <P><i class="bi bi-house-fill"></i> Maison</P>
+                                <p>Superficie : <span style="font-family: fantasy;">50 m²</span><i
+                                        class="bi bi-heart"></i></p>
+                            </div>
+                        </div>
+                        <div class="maison">
+                            <img src="m1.jpeg" alt="" srcset="" width="320px" height="240px">
+                            <div class="prix">
+                                <p>1 500 $/mois</p>
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <div class="localiser">
+                                <p>Bouaké-Air france 3</p>
+                                <P><i class="bi bi-house-fill"></i> Maison</P>
+                                <p>Superficie : <span style="font-family: fantasy;">50 m²</span><i
+                                        class="bi bi-heart"></i> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                    <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                    <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                </div>
+
+            </section>
+            <section class="section4">
+                <div>
+                    <div class="maison">
+                        <img src="m3.jpeg" alt="" srcset="" width="100%" height="240px">
+                        <div class="prix">
+                            <p>1 500 $/mois</p>
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <div class="localiser">
+                            <p>Bouaké-Air france 3</p>
+                            <P><i class="bi bi-house-fill"></i> Maison</P>
+                            <p>Superficie : <span style="font-family: fantasy;">50 m²</span><i class="bi bi-heart"></i>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                        <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                        <button><a href=""><i class=" bi bi-check"></i> Expertise locale</a></button>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h3>Contacter l'agent </h3>
+                    <div style="display: flex; gap: 25px;">
+                        <img src="m3.jpeg" alt="" width="50px" height="50px" style="border-radius:50%">
+                        <div>
+                            <p>Toussaint Koffi</p>
+                            <p><i class="bi bi-phone"></i> <strong> 07 58 33 15 03</strong> </p>
+                        </div>
+
+                    </div>
+                    <form action="" method="get" style="display: flex; flex-direction: column;">
+                        <input type="email" name="" id="" placeholder="Votre Numéro ou E-mail..">
+                        <textarea name="" id="" cols="30" rows="" placeholder="Votre Message..."></textarea>
+                        <button type="submit" onclick="confirm('Valider')">Envoyer</button>
+                    </form>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+        <div class="foot">
+            <div class="logo">
+                <i class="bi bi-house-check-fill"></i>
+                <h3>
+                    <a style="color: white; font-family: cursive;" href="">Immobilier<span style="font-size: 24px; color: rgb(21, 45, 202)">Pro</span></a>
+                </h3>
+            </div>
+           
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas ea earum, eius repellat at saepe laboriosam sapiente nihil vitae, praesentium nesciunt modi quae quaerat aspernatur incidunt ad debitis nisi?</p>
+             <nav>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-whatsapp"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+             </nav>
+        </div>
+        <div  class="foot">
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Acheter</a></li>
+                <li><a href="">Louer</a></li>
+                <li><a href="">Vendre</a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            <ul>
+                <li>Liens rapides</li>
+                <li><a href="">Aide</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            <ul>
+                <li><a href="">Légal</a></li>
+                <li><a href="">RGPO</a></li>
+                <li><a href="">Moniteurs</a></li>
+                <li><a href="">CCU</a></li>
+            </ul>
+        </div>
+        <div class="foot"> 
+            <form action="">
+                <h3>S'inscrire à la Newsletter</h3>
+                <input type="email" name="" id="" placeholder="Votre email ">
+                <button>S'inscrire</button>
+            </form>
+        </div>
+        </div>
+        <hr>
+        <div class="tkode"> 
+            <p>©2026 Tous droits reservés | @T-kode</p>
+        </div>
+    </footer>
 </body>
+
 </html>
