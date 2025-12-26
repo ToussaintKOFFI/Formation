@@ -17,7 +17,7 @@ header{
     box-shadow: 4px 1px 6px;
     top: 0;
     z-index: 100;
-    /* position:fixed; */
+    position:fixed; 
 }
 header ul{
     list-style: none;
