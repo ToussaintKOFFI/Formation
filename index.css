@@ -52,9 +52,6 @@ a{
     padding: 7px 10px;
     border-radius: 7px;
 }
-.item:nth-child(1){
-    border-bottom: solid 2px rgb(11, 11, 235) ;
-}
 .item a{
     transition: all .5s;
 }
@@ -67,6 +64,22 @@ a{
     padding: 10px;
     color: white;
 }
+.active{
+    border-bottom: solid 2px rgb(11, 11, 235) ;
+}
+.item::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: blue;
+    transition: all .3s;
+}
+.item:hover::after{
+    width: 100%;
+    transition: all .3s;
+}
+
 .profil{
     width: 30px;
     height: 30px;
@@ -484,6 +497,21 @@ footer.logo h3 a{
 .vi{
     display: none;
 }
+
+
+/* avant apparition */
+.hidden{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all .7s ease;
+}
+
+/* une fois visible */
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
 @media screen and (max-width:1000PX) {
     header,footer{
         display: none;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ppup-content{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        z-index: 1000;
+        text-align: center;
+    }
+    .confirm-btn, .cancel-btn{
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .confirm-btn{
+        background-color: red;
+        color: white;
+    }
+    .cancel-btn{
+        background-color: gray;
+        color: white;
+    }
+
+</style>
+<body>
+    <button class="sup">Supprimer</button>
+    <div class="ppup-content">
+        <h2>Voulez-vous supprimer cet élément?</h2>
+        <button class="confirm-btn">Oui</button>
+        <button class="cancel-btn">Non</button>
+
+    </div>
+    <button id="start">Démarrer</button>
+<button id="stop">Arrêter</button>
+<video id="preview" controls></video>
+
+
+    
+    <script>
+        let recorder;
+let chunks = [];
+
+document.getElementById("start").onclick = async () => {
+  const stream = await navigator.mediaDevices.getDisplayMedia({
+    video: true,
+    audio: true
+  });
+
+  document.getElementById("preview").srcObject = stream;
+
+  recorder = new MediaRecorder(stream);
+
+  recorder.ondataavailable = e => chunks.push(e.data);
+
+  recorder.onstop = () => {
+    const blob = new Blob(chunks, { type: "video/webm" });
+    document.getElementById("preview").src = URL.createObjectURL(blob);
+    chunks = [];
+  };
+
+  recorder.start();
+};
+
+document.getElementById("stop").onclick = () => recorder.stop();
+
+
+    const popup = document.querySelector('.ppup-content');
+    const sup = document.querySelector('.sup');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    sup.addEventListener('click', () => {
+        popup.style.display = 'block';
+    });
+    cancelBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+    popup.querySelector('.confirm-btn').addEventListener('click', () => {
+        alert('Élément supprimé!');
+        popup.style.display = 'none';
+    });
+    popup.addEventListener('click', (e) => {
+        if(e.target === popup){
+            popup.style.display = 'none';
+        }
+    });
+
+
+    </script>
+</body>
+</html>

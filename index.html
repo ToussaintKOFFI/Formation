@@ -12,7 +12,6 @@
 
 <body>
     <h1 class="vi" style="color: red;">VERSION PC UNIQUEMENT</h1>
-    <button style="background: blue; color: white; border-radius: 10px; box-shadow: 3PX 4px 5px;" class="vi" onclick="alert('I LOVE U MON INFORMATICIENNE')">Clique moi pour voir le message</button>
     <header>
         <div class="logo">
             <i class="bi bi-house-check-fill"></i>
@@ -22,20 +21,20 @@
         </div>
         <nav>
             <ul id="list-items">
-                <li class="item"><a href="">Achéter</a></li>
-                <li class="item"><a href="">Louer</a></li>
-                <li class="item"><a href="">Vendre</a></li>
-                <li class="item"><a href="">Estimer</a></li>
+                <li class="item active"><a href="#">Achéter</a></li>
+                <li class="item"><a href="#">Louer</a></li>
+                <li class="item"><a href="#">Vendre</a></li>
+                <li class="item"><a href="#">Estimer</a></li>
             </ul>
         </nav>
         <div class="annonce">
-            <i class="bi bi-heart" style="font-size: 20px"></i>
+            <i class="bi bi-heart coeur"title="Ajouter au favori" onclick="font()" style="font-size: 20px"></i>
             <button class="btnAnonnce"><a href="">Déposer une annonce</a></button>
             <img src="Yassi.jpeg" alt="" class="profil" />
         </div>
     </header>
     <main>
-    <section class="section1" style="background-image: url('m3.jpeg');">
+    <section class="section1 hidden" style="background-image: url('m3.jpeg');">
         <h2>Trouvez le bien immobilier de vos rêves</h2>
         <p>Achat,vente et location en toute confiance.</p>
         <form action="" method="get">
@@ -60,7 +59,7 @@
             <button type="submit">Rechercher</button>
         </form>
     </section>
-    <section class="section2">
+    <section class="section2 hidden">
         <div class="left">
             <form action="">
                 <div class="filtres">
@@ -109,7 +108,7 @@
             </form>
         </div>
         <div class="rightP">
-            <section class="section3">
+            <section class="section3 hidden">
                 <div class="titre">
                     <h3>Appartement et maison à louer</h3>
 
@@ -264,5 +263,6 @@
             <p>©2026 Tous droits reservés | @T-kode</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
